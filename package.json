@@ -1,0 +1,28 @@
+{
+  "name": "news-scrapers",
+  "version": "1.0.0",
+  "description": "This is an app that lets users view and leave comments on the latest news",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahriar998/News-Scrapers.git"
+  },
+  "author": "Shahriar Bin Elias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahriar998/News-Scrapers/issues"
+  },
+  "homepage": "https://github.com/shahriar998/News-Scrapers#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.7.1"
+  }
+}
