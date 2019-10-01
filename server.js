@@ -47,6 +47,7 @@ db.once("open", function (){
 //Set up Express Router
 var router = express.Router();
 
+require ("./config/routes.js")(router);
 app.use(router);
 // Start the server
 app.listen(PORT, function() {
