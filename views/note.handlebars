@@ -1,22 +1,11 @@
-<div>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
+<div class="jumbotron text-center">
+  <div class="overlay">
+  </div>
+  <div class="background-image">
+  </div>
+  <div class="caption">
+    <h1>Saved Articles</h1>
+  </div>
 </div>
-<div class="row">
-    <div class="col s2"></div>
-    <div class="col s8 left-align">
-        {{#each article}}
-
-        <div class="card-panel">
-            <h4>{{this.title}}</h4>
-            <a href="/readArticle/{{this._id}}" class="waves-effect waves-light btn" id="btnSignUp"> Read Article</a>
-        </div>
-        {{/each}}
-    </div>
+<div class="container-fluid article-container">
 </div>
