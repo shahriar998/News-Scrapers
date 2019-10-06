@@ -1,36 +1,37 @@
 var mongoose = require("mongoose");
 
-// Save a reference to the Schema constructor
+// save a reference to the Schema constructor
 var Schema = mongoose.Schema;
 
-// Using the Schema constructor, create a new UserSchema object
-// This is similar to a Sequelize model
+// create a new article schema. The link should be unique, but the other properties are not required because they may not exist on the website to be scraped. There is validation on the route to add them to the database on if these properties exist.
 var ArticleSchema = new Schema({
-  // `title` is required and of type String
   title: {
     type: String,
-    required: true,
-    unique:true
+    require: false
   },
-  summary:{
-    type:String,
-    required: true
-  },
-  // `link` is required and of type String
   link: {
     type: String,
-    required: true
+    unique: true,
+    require: false
   },
-  date: String,
-
+  intro: {
+    type: String,
+    require: false
+  },
   saved: {
-		type: Boolean,
-		default: false
-	}
+    type: Boolean,
+    default: false
+  },
+  notes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Note"
+    }
+  ]
 });
 
-// This creates our model from the above schema, using mongoose's model method
+// create model
 var Article = mongoose.model("Article", ArticleSchema);
 
-// Export the Article model
+// export the model
 module.exports = Article;
